@@ -1,5 +1,6 @@
+import React from 'react';
+import { above, below } from 'styles/mediaQuery';
 import styled from 'styled-components';
-import theme from 'styles/theme';
 
 const Wrapper = styled('div')`
     width: 100%;
@@ -42,6 +43,31 @@ const Body = styled('div')`
     align-items: center;
 `;
 
+const CardWrapper = styled('div')`
+    &.list {
+        display: flex;
+        flex-direction: column;
+
+        & > div {
+            margin-bottom: 15px;
+            ${above.desktop} {
+                margin-bottom: 18px;
+            }
+        }
+    }
+
+    &.grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 26px 35px;
+
+        ${above.desktop} {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 48px 57px;
+        }
+    }
+`;
+
 export default function Home({ users }) {
     console.log(users);
     if (users === null) {
@@ -52,7 +78,9 @@ export default function Home({ users }) {
             <Header>
                 <Heading>Meet the Team</Heading>
             </Header>
-            <Body></Body>
+            <Body>
+                <CardWrapper className={toggle ? 'list' : 'grid'}></CardWrapper>
+            </Body>
         </Wrapper>
     );
 }
