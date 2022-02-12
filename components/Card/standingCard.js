@@ -1,7 +1,7 @@
 import { above } from 'styles/mediaQuery';
 import Avatar from 'components/Avatar';
-import CardHeading from './Heading';
-import CardText from './Text';
+import CardHeading from 'components/Heading/h3';
+import CardText from 'components/Text';
 import styled from 'styled-components';
 import EmailIcon from 'components/Icon/email';
 import PhoneIcon from 'components/Icon/phone';

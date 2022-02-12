@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import theme from 'styles/theme';
-import { above } from 'styles/mediaQuery';
 
 const Heading = styled('h3')`
     color: ${theme.colors.text};

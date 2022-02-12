@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import theme from 'styles/theme';
-import { above } from 'styles/mediaQuery';
 
 const Text = styled('p')`
     color: ${theme.colors.text};
