@@ -185,10 +185,6 @@ export default function Home({ users }) {
 
     useEffect(() => {
         filterArray(users);
-    }, []);
-
-    useEffect(() => {
-        filterArray(users);
     }, [search]);
 
     const filterArray = (users) => {
