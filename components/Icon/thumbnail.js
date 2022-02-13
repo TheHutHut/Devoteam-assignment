@@ -1,4 +1,3 @@
-import { above } from 'styles/mediaQuery';
 import styled from 'styled-components';
 
 const Svg = styled('svg')``;

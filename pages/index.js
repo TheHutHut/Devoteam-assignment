@@ -238,13 +238,13 @@ export default function Home({ users }) {
                         </Button>
                     </LayoutButtonWrapper>
                 </SearchWrapper>
-                <CardWrapper className={toggle ? 'list' : 'grid'}>
-                    {usersData.length === 0 ? (
-                        <InfoHeading>No team member by that name</InfoHeading>
-                    ) : (
+                {usersData.length === 0 ? (
+                    <InfoHeading>No team member by that name</InfoHeading>
+                ) : (
+                    <CardWrapper className={toggle ? 'list' : 'grid'}>
                         <LazyCardsRender toggle={toggle} users={usersData} />
-                    )}
-                </CardWrapper>
+                    </CardWrapper>
+                )}
             </Body>
         </Wrapper>
     );
